@@ -2,7 +2,7 @@ import type { IProductEntity, IProductPreview } from "../types/interfaces/IProdu
 import type IProductsFilters from "../types/interfaces/IProductsFilters";
 import type { ICategory } from "../types/interfaces/ICategory";
 
-const HOST = "https://ecommerce-server-rgayv1jyy-dimuromatias.vercel.app";
+const HOST = import.meta.env.DB_URL;
 
 export async function getProductsFromService({ type }: IProductsFilters): Promise<IProductPreview[]> {
     try {        
